@@ -169,6 +169,7 @@ The first 8 byte is `codeSize` which is what I called jsInit. It is a kind og in
 * [ ] Finish documentation
 * [ ] Implement tests
 * [ ] Add pre-built binaries
+* [ ] Add testdata
 
 ## Resources
 
