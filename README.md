@@ -9,9 +9,9 @@
 
 # neXeruncator
 
-nexeruncator; extracts or inserts javascript source file from or to nexe-compiled binaries.
+neXeruncator; extracts or inserts javascript source file from or into nexe-compiled binaries.
 
-* The word `nexeruncator` is derived from `nexe` and `aberuncate`. Nothing special!
+* The word `neXeruncator` is derived from `nexe` and `aberuncate`. Nothing special!
 
 ## Notes
 
@@ -57,6 +57,14 @@ compiler.ts`
 ```
 
 The first 8 byte is `codeSize` which is what I called jsInit. It is a kind og initializer javascript code just before user's javascript code and finished with double semi-coloumns. And the second 8 byte is size of user's appended javascript source file.
+
+## Todo
+
+* [ ] Implement a info function
+  * [ ] Collect info about nexe-compiled binary(js source name, file size)
+  * [ ] Print this info
+* [ ] Add to pkg.go.dev as a module
+* [ ] Finish documentation
 
 ## Resources
 
