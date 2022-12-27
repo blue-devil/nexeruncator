@@ -16,7 +16,7 @@ neXeruncator; extracts or inserts javascript source file from or into nexe-compi
 
 * The word `neXeruncator` is derived from `nexe` and `aberuncate`. Nothing special!
 
-## How to Build
+## Build
 
 neXeruncator project created using Go version 1.19.
 Building project is as simple as running `go build`
@@ -25,10 +25,95 @@ Building project is as simple as running `go build`
 go build main.go
 ```
 
-## How to install
+## Install
 
 neXeruncator can work as a standalone executable, you do not need to install it.
 Apply the build step.
+
+## Usage
+
+Running `nexeruncator` prints help. There are two commands `extract` and `insert`.
+
+```txt
+          __    __                              _
+ _ __   __\ \  / /__ _ __ _   _ _ __   ___ __ _| |_ ___  _ __
+| '_ \ / _ \ \/ / _ | '__| | | | '_ \ / __/ _' | __/ _ \| '__|
+| | | |  __/>  <  __| |  | |_| | | | | (_| (_| | || (_) | |
+|_| |_|\___/ /\ \___|_|   \__,_|_| |_|\___\__,_| \_\___/|_|
+          /_/  \_\                  Blue DeviL \_____/  SCT
+
+NAME:
+   nexeruncator - aberuncator of nexe-compiled binaries
+
+USAGE:
+   nexeruncator [global options] command [command options] [arguments...]
+
+VERSION:
+   0.2.0
+
+COMMANDS:
+   help     displays help messages.
+   extract  extracts javascript source
+   insert   inserts javascript source
+
+GLOBAL OPTIONS:
+   --version, -v  print the version (default: false)
+```
+
+### extract
+
+`extract` command simply extracts embedded javascript file from nexe-compiled
+binary.
+
+```txt
+NAME:
+   nexeruncator extract - extracts javascript source
+
+USAGE:
+   nexeruncator extract [command options]
+
+DESCRIPTION:
+   Extracts javascript source file from nexe-compiled binary
+
+OPTIONS:
+   --file value  nexe-compiled binary
+   --help, -h    show help (default: false)
+```
+
+Below, we can see a sample command line for extracting:
+
+```bash
+nexeruncator extract --file nexefile.exe
+```
+
+### insert
+
+`insert` command inserts a new javascript source into nexe-compiled binary and
+created a new file named: `patched.exe`. `insert` command takes 2 arguments:
+nexe-compiled binary and new javascript:
+
+```bash
+NAME:
+   nexeruncator insert - inserts javascript source
+
+USAGE:
+   nexeruncator insert [command options]
+
+DESCRIPTION:
+   Inserts javascript source file into nexe-compiled binary
+
+OPTIONS:
+   --dest value  nexe-compiled binary
+   --src value   javascript source
+   --help, -h    show help (default: false)
+```
+
+Below, we can see a sample command line for inserting javascript source into
+nexe-compiled binary:
+
+```bash
+nexeruncator insert --dest nexefile.exe --src myjsfile.js
+```
 
 ## Notes
 
