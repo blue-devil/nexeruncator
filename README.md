@@ -3,8 +3,11 @@
 <p align="center"></p>
 
 <div align="center">
-<img src="https://img.shields.io/badge/license-GPLv3-green">
-<img src="https://img.shields.io/badge/Go-v1.19-00ADD8">
+
+![License](https://img.shields.io/badge/license-GPLv3-green)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/blue-devil/nexeruncator)
+[![Go Report Card](https://goreportcard.com/badge/github.com/blue-devil/nexeruncator)](https://goreportcard.com/report/github.com/blue-devil/nexeruncator)
+
 </div>
 
 # neXeruncator
@@ -12,6 +15,20 @@
 neXeruncator; extracts or inserts javascript source file from or into nexe-compiled binaries.
 
 * The word `neXeruncator` is derived from `nexe` and `aberuncate`. Nothing special!
+
+## How to Build
+
+neXeruncator project created using Go version 1.19.
+Building project is as simple as running `go build`
+
+```bash
+go build main.go
+```
+
+## How to install
+
+neXeruncator can work as a standalone executable, you do not need to install it.
+Apply the build step.
 
 ## Notes
 
@@ -65,6 +82,8 @@ The first 8 byte is `codeSize` which is what I called jsInit. It is a kind og in
   * [ ] Print this info
 * [ ] Add to pkg.go.dev as a module
 * [ ] Finish documentation
+* [ ] Implement tests
+* [ ] Add pre-built binaries
 
 ## Resources
 

@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
 
 - urfave v2 implemented for commandline parameters
 - commands added for extracting and inserting
+- Added Todo
+- Added `goreportcard`
 
 ### Changed
 
@@ -16,7 +18,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Links refers old repo are fixed
+- Links which refers old repo are fixed
 
 ## [0.1.0] - 2022-12-23
 
