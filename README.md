@@ -49,7 +49,7 @@ USAGE:
    nexeruncator [global options] command [command options] [arguments...]
 
 VERSION:
-   0.2.0
+   0.3.0
 
 COMMANDS:
    help     displays help messages.

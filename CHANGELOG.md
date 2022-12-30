@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0] - 2022-12-30
+
+### Changed
+
+- FIX 1: ClearScreen func updated for a cross-platform version
+
 ## [0.2.0] - 2022-12-27
 
 ### Added
@@ -29,5 +35,6 @@ It exports and and saved the javascript source as its original name.
 nexeruncator can also insert a new javascript source file into nexe-compiled
 binary.
 
+[0.3.0]: https://github.com/blue-devil/nexeruncator/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/blue-devil/nexeruncator/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/blue-devil/nexeruncator/releases/tag/v0.1.0

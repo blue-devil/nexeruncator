@@ -29,7 +29,7 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
-var Version = "0.2.0"
+var Version = "0.3.0"
 var AppName = "nexeruncator"
 
 func main() {
