@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"math"
 	"os"
+	"os/exec"
 	"runtime"
 	"strconv"
-	"syscall"
 )
 
 var MagicBytes = []byte{
@@ -20,20 +20,25 @@ var MagicBytes = []byte{
 	0x2F,
 }
 
-// Checks OS and clears command prompt/terminal
+// Checks OS and slears command prompt/terminal
 func ClearConsole() {
-	if runtime.GOOS == "windows" {
-		// retrieve stdout handle
-		stdout := syscall.Handle(os.Stdout.Fd())
-
-		var originalMode uint32
-		syscall.GetConsoleMode(stdout, &originalMode)
-		originalMode |= 0x0004
-		// set console mode for printing ansi escape codes
-		// this is for cmd.exe
-		syscall.MustLoadDLL("kernel32").MustFindProc("SetConsoleMode").Call(uintptr(stdout), uintptr(originalMode))
+	ros := runtime.GOOS
+	switch ros {
+	case "windows":
+		cmd := exec.Command("cmd", "/c", "cls")
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+	case "linux":
+		cmd := exec.Command("clear") //Linux example, its tested
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+	case "darwin":
+		cmd := exec.Command("clear") //Linux example, its tested
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+	default:
+		fmt.Printf("[-] OS %s not defined", ros)
 	}
-	fmt.Print("\033[H\033[2J")
 }
 
 // CheckNoColor returns true if NO_COLOR environmental variable is set
